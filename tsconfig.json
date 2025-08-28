@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "plugin",
+    "outDir": "dist",
+    "lib": ["DOM", "ES2015"]
+  },
+  "include": ["plugin/**/*"]
+}

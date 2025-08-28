@@ -1,0 +1,47 @@
+{
+  "name": "@buddy-works/visual-tests-playwright",
+  "version": "0.1.0",
+  "description": "Buddy Visual Test Playwright Plugin",
+  "type": "module",
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint \"**/*\"",
+    "format": "prettier --write \"**/*.{js,ts,json,md}\"",
+    "build": "node build.js"
+  },
+  "keywords": [
+    "playwright",
+    "visual testing",
+    "regression"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "Bartosz Wróbel",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "9.22.0",
+    "@typescript-eslint/eslint-plugin": "8.26.1",
+    "@typescript-eslint/parser": "8.26.1",
+    "esbuild": "0.25.1",
+    "esbuild-node-externals": "1.18.0",
+    "eslint": "9.22.0",
+    "eslint-config-prettier": "10.1.1",
+    "eslint-plugin-prettier": "5.2.3",
+    "eslint-plugin-unicorn": "57.0.0",
+    "prettier": "3.5.3",
+    "typescript": "5.8.2",
+    "typescript-eslint": "8.26.1",
+    "@playwright/test": "1.51.1"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  }
+}
