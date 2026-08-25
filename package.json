@@ -1,6 +1,6 @@
 {
   "name": "@buddy-works/visual-tests-playwright",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Buddy Visual Test Playwright Plugin",
   "keywords": [
     "playwright",
