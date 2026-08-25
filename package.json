@@ -1,47 +1,51 @@
 {
   "name": "@buddy-works/visual-tests-playwright",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Buddy Visual Test Playwright Plugin",
-  "type": "module",
-  "main": "./dist/index.js",
+  "keywords": [
+    "playwright",
+    "regression",
+    "visual testing"
+  ],
+  "license": "MIT",
+  "author": "Bartosz Wróbel",
   "files": [
     "dist"
   ],
-  "scripts": {
-    "lint": "eslint \"**/*\"",
-    "format": "prettier --write \"**/*.{js,ts,json,md}\"",
-    "build": "node build.js"
-  },
-  "keywords": [
-    "playwright",
-    "visual testing",
-    "regression"
-  ],
-  "engines": {
-    "node": ">=20"
-  },
-  "author": "Bartosz Wróbel",
-  "license": "MIT",
-  "devDependencies": {
-    "@eslint/js": "9.22.0",
-    "@typescript-eslint/eslint-plugin": "8.26.1",
-    "@typescript-eslint/parser": "8.26.1",
-    "esbuild": "0.25.1",
-    "esbuild-node-externals": "1.18.0",
-    "eslint": "9.22.0",
-    "eslint-config-prettier": "10.1.1",
-    "eslint-plugin-prettier": "5.2.3",
-    "eslint-plugin-unicorn": "57.0.0",
-    "prettier": "3.5.3",
-    "typescript": "5.8.2",
-    "typescript-eslint": "8.26.1",
-    "@playwright/test": "1.51.1"
-  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./dist/types/index.d.cts",
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "import": {
+        "types": "./dist/types/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/types/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     }
+  },
+  "scripts": {
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit",
+    "format": "oxfmt",
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@types/node": "^20.19.43",
+    "esbuild": "0.28.2",
+    "esbuild-node-externals": "2.0.0",
+    "oxfmt": "0.65.0",
+    "oxlint": "1.80.0",
+    "typescript": "7.0.2"
+  },
+  "peerDependencies": {
+    "@playwright/test": ">=1.30.0"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

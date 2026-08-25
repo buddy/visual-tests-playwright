@@ -1,4 +1,4 @@
-import { Cookie } from "@playwright/test";
+import type { Cookie } from "@playwright/test";
 
 /**
  * Interface representing viewport dimensions
@@ -177,10 +177,4 @@ interface VisualTestsPluginOptions {
   suppressErrors?: boolean;
 }
 
-export {
-  Snapshot,
-  SnapshotOptions,
-  Device,
-  Viewport,
-  VisualTestsPluginOptions,
-};
+export { Snapshot, SnapshotOptions, Device, Viewport, VisualTestsPluginOptions };

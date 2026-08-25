@@ -1,5 +1,5 @@
 import { test as base } from "@playwright/test";
-import withVisualTestPluginFixture from "@buddy-works/playwright";
+import withVisualTestPluginFixture from "@buddy-works/visual-tests-playwright";
 
 const test = withVisualTestPluginFixture(base);
 

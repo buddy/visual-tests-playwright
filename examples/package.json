@@ -4,21 +4,20 @@
   "description": "Buddy Visual Test Playwright Plugin Text",
   "type": "module",
   "scripts": {
-    "start": "node './server.js'",
-    "visual:basic": "bdy vt exec \"playwright test\"",
-    "test": "start-server-and-test start http://localhost:4322 visual:basic"
+    "test": "bdy tests visual session create \"playwright test\""
   },
   "dependencies": {
-    "@buddy-works/playwright": "link:../../Library/pnpm/global/5/node_modules/@buddy-works/playwright",
-    "bdy": "1.9.4"
+    "@buddy-works/visual-tests-playwright": "link:..",
+    "bdy": "1.24.0"
   },
   "devDependencies": {
-    "@types/node": "22.13.10",
-    "typescript": "5.8.2"
+    "@playwright/test": "1.62.1",
+    "@types/node": "24.13.3",
+    "typescript": "7.0.2"
   },
   "pnpm": {
     "overrides": {
-      "@buddy-works/playwright": "link:../../Library/pnpm/global/5/node_modules/@buddy-works/playwright"
+      "@buddy-works/visual-tests-playwright": "link:.."
     }
   }
 }
